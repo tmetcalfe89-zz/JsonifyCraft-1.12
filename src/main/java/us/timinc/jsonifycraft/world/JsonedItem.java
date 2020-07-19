@@ -1,12 +1,20 @@
 package us.timinc.jsonifycraft.world;
 
 import com.google.common.primitives.Ints;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 import us.timinc.jsonifycraft.JsonifyCraft;
 import us.timinc.jsonifycraft.description.ItemDescription;
 import us.timinc.mcutil.MCRegistry;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class JsonedItem extends Item {
     private final ItemDescription description;
@@ -50,5 +58,12 @@ public class JsonedItem extends Item {
         }
 
         return rarity;
+    }
+
+    @SideOnly(Side.CLIENT)
+    public void addInformation(ItemStack stack, @Nullable World worldIn, List<String> tooltip, ITooltipFlag flagIn) {
+        if (description.hasFlag("lore")) {
+            tooltip.add(new TextComponentTranslation(String.format("item.jsonifycraft.%s.lore", description.name)).getFormattedText());
+        }
     }
 }
