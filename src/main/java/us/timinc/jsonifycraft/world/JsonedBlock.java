@@ -11,6 +11,8 @@ import us.timinc.jsonifycraft.JsonifyCraft;
 import us.timinc.jsonifycraft.description.BlockDescription;
 import us.timinc.mcutil.MCRegistry;
 
+import javax.annotation.Nullable;
+
 public class JsonedBlock extends Block {
     private final BlockDescription description;
 
@@ -21,6 +23,9 @@ public class JsonedBlock extends Block {
     }
 
     private void setup() {
+        // Custom model stuff.
+        this.fullBlock = !description.hasFlag("model") && !description.hasFlag("ghost");
+
         // Sound type
         if (MCRegistry.SOUND_TYPES.isValidName(description.sounds)) {
             setSoundType(MCRegistry.SOUND_TYPES.getFromName(description.sounds));
@@ -59,10 +64,20 @@ public class JsonedBlock extends Block {
     }
 
     @Override
+    @Nullable
     public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
         if (description == null)
             return super.getCollisionBoundingBox(blockState, worldIn, pos);
 
         return description.hasFlag("ghost") ? NULL_AABB : super.getCollisionBoundingBox(blockState, worldIn, pos);
+    }
+    public boolean isOpaqueCube(IBlockState state)
+    {
+        return this.fullBlock;
+    }
+
+    public boolean isFullCube(IBlockState state)
+    {
+        return this.fullBlock;
     }
 }
