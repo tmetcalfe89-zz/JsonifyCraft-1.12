@@ -2,6 +2,7 @@ package us.timinc.jsonifycraft.world;
 
 import com.google.common.primitives.Ints;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemFood;
@@ -43,6 +44,20 @@ public class JsonedFood extends ItemFood {
       setRarity(MCRegistry.RARITIES.getFromName(description.rarity));
     } else {
       JsonifyCraft.log("Attempted rarity %s for %s, but it does not exist.", description.rarity, description.name);
+    }
+
+    // Always edible.
+    if (description.canEatWhenFull) {
+      this.setAlwaysEdible();
+    }
+  }
+
+  @Override
+  public int getMaxItemUseDuration(ItemStack stack) {
+    if (description.fastToEat) {
+      return super.getMaxItemUseDuration(stack) / 2;
+    } else {
+      return super.getMaxItemUseDuration(stack);
     }
   }
 
