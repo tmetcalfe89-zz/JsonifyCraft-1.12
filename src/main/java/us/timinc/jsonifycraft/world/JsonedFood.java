@@ -25,7 +25,7 @@ public class JsonedFood extends ItemFood {
   private EnumRarity rarity;
 
   public JsonedFood(FoodDescription foodDescription) {
-    super(foodDescription.hunger, foodDescription.getSaturation(), foodDescription.meat);
+    super(foodDescription.hunger, foodDescription.getSaturation(), foodDescription.hasFlag("meat"));
 
     this.description = foodDescription;
 
@@ -47,14 +47,14 @@ public class JsonedFood extends ItemFood {
     }
 
     // Always edible.
-    if (description.canEatWhenFull) {
+    if (description.hasFlag("canEatWhenFull")) {
       this.setAlwaysEdible();
     }
   }
 
   @Override
   public int getMaxItemUseDuration(ItemStack stack) {
-    if (description.fastToEat) {
+    if (description.hasFlag("fastToEat")) {
       return super.getMaxItemUseDuration(stack) / 2;
     } else {
       return super.getMaxItemUseDuration(stack);

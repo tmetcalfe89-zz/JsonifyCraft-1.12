@@ -13,9 +13,6 @@ public class FoodDescription extends ItemDescription {
   public int hunger;
   public float saturation = -1.0F;
   public String nourishment = "normal";
-  public boolean meat;
-  public boolean canEatWhenFull;
-  public boolean fastToEat;
   public EffectDescription[] effects = {};
 
   @Override
