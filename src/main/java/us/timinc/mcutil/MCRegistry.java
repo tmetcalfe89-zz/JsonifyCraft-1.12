@@ -60,6 +60,7 @@ public abstract class MCRegistry<T> {
             mapColors.put("GRASS", MapColor.GRASS);
             mapColors.put("SAND", MapColor.SAND);
             mapColors.put("CLOTH", MapColor.CLOTH);
+            mapColors.put("WOOL", MapColor.CLOTH);
             mapColors.put("TNT", MapColor.TNT);
             mapColors.put("ICE", MapColor.ICE);
             mapColors.put("IRON", MapColor.IRON);
@@ -79,6 +80,7 @@ public abstract class MCRegistry<T> {
             mapColors.put("PINK", MapColor.PINK);
             mapColors.put("GRAY", MapColor.GRAY);
             mapColors.put("SILVER", MapColor.SILVER);
+            mapColors.put("LIGHT_GRAY", MapColor.SILVER);
             mapColors.put("CYAN", MapColor.CYAN);
             mapColors.put("PURPLE", MapColor.PURPLE);
             mapColors.put("BLUE", MapColor.BLUE);
@@ -101,6 +103,7 @@ public abstract class MCRegistry<T> {
             mapColors.put("PINK_STAINED_HARDENED_CLAY", MapColor.PINK_STAINED_HARDENED_CLAY);
             mapColors.put("GRAY_STAINED_HARDENED_CLAY", MapColor.GRAY_STAINED_HARDENED_CLAY);
             mapColors.put("SILVER_STAINED_HARDENED_CLAY", MapColor.SILVER_STAINED_HARDENED_CLAY);
+            mapColors.put("LIGHT_GRAY_STAINED_HARDENED_CLAY", MapColor.SILVER_STAINED_HARDENED_CLAY);
             mapColors.put("CYAN_STAINED_HARDENED_CLAY", MapColor.CYAN_STAINED_HARDENED_CLAY);
             mapColors.put("PURPLE_STAINED_HARDENED_CLAY", MapColor.PURPLE_STAINED_HARDENED_CLAY);
             mapColors.put("BLUE_STAINED_HARDENED_CLAY", MapColor.BLUE_STAINED_HARDENED_CLAY);
@@ -108,6 +111,29 @@ public abstract class MCRegistry<T> {
             mapColors.put("GREEN_STAINED_HARDENED_CLAY", MapColor.GREEN_STAINED_HARDENED_CLAY);
             mapColors.put("RED_STAINED_HARDENED_CLAY", MapColor.RED_STAINED_HARDENED_CLAY);
             mapColors.put("BLACK_STAINED_HARDENED_CLAY", MapColor.BLACK_STAINED_HARDENED_CLAY);
+            mapColors.put("WHITE_TERRACOTTA", MapColor.WHITE_STAINED_HARDENED_CLAY);
+            mapColors.put("ORANGE_TERRACOTTA", MapColor.ORANGE_STAINED_HARDENED_CLAY);
+            mapColors.put("MAGENTA_TERRACOTTA", MapColor.MAGENTA_STAINED_HARDENED_CLAY);
+            mapColors.put("LIGHT_BLUE_TERRACOTTA", MapColor.LIGHT_BLUE_STAINED_HARDENED_CLAY);
+            mapColors.put("YELLOW_TERRACOTTA", MapColor.YELLOW_STAINED_HARDENED_CLAY);
+            mapColors.put("LIME_TERRACOTTA", MapColor.LIME_STAINED_HARDENED_CLAY);
+            mapColors.put("PINK_TERRACOTTA", MapColor.PINK_STAINED_HARDENED_CLAY);
+            mapColors.put("GRAY_TERRACOTTA", MapColor.GRAY_STAINED_HARDENED_CLAY);
+            mapColors.put("LIGHT_GRAY_TERRACOTTA", MapColor.SILVER_STAINED_HARDENED_CLAY);
+            mapColors.put("CYAN_TERRACOTTA", MapColor.CYAN_STAINED_HARDENED_CLAY);
+            mapColors.put("PURPLE_TERRACOTTA", MapColor.PURPLE_STAINED_HARDENED_CLAY);
+            mapColors.put("BLUE_TERRACOTTA", MapColor.BLUE_STAINED_HARDENED_CLAY);
+            mapColors.put("BROWN_TERRACOTTA", MapColor.BROWN_STAINED_HARDENED_CLAY);
+            mapColors.put("GREEN_TERRACOTTA", MapColor.GREEN_STAINED_HARDENED_CLAY);
+            mapColors.put("RED_TERRACOTTA", MapColor.RED_STAINED_HARDENED_CLAY);
+            mapColors.put("BLACK_TERRACOTTA", MapColor.BLACK_STAINED_HARDENED_CLAY);
+            mapColors.put("CRIMSON_NYLIUM", MapColor.RED);
+            mapColors.put("CRIMSON_STEM", MapColor.MAGENTA_STAINED_HARDENED_CLAY);
+            mapColors.put("CRIMSON_HYPHAE", MapColor.BROWN_STAINED_HARDENED_CLAY);
+            mapColors.put("WARPED_NYLIUM", MapColor.CYAN);
+            mapColors.put("WARPED_STEM", MapColor.CYAN);
+            mapColors.put("WARPED_HYPHAE", MapColor.BROWN_STAINED_HARDENED_CLAY);
+            mapColors.put("WARPED_WART", MapColor.CYAN);
 
             return this;
         }
