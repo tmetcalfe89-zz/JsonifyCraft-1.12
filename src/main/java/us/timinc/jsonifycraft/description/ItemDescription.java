@@ -8,7 +8,11 @@ import us.timinc.jsonifycraft.world.JsonedItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemDescription extends WorldObjectDescription implements IProviderItem {
+public class ItemDescription extends JsonDescription implements IProviderItem {
+    public String group = "misc";
+    public String rarity = "common";
+    public int stack = 64;
+
     @Override
     public List<Item> getItems() {
         ArrayList<Item> items = new ArrayList<>();

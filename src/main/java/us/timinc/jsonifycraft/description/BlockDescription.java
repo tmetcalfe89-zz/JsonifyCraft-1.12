@@ -12,7 +12,7 @@ import us.timinc.jsonifycraft.world.JsonedBlockItem;
 import java.util.ArrayList;
 import java.util.List;
 
-public class BlockDescription extends WorldObjectDescription implements IProviderBlock, IProviderItem {
+public class BlockDescription extends ItemDescription implements IProviderBlock, IProviderItem {
     public String material = "ground";
     public String sounds = "stone";
     public String mapcolor = "";

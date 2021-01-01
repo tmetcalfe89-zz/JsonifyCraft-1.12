@@ -7,11 +7,10 @@ import net.minecraft.item.ItemBlock;
 import net.minecraft.item.ItemStack;
 import us.timinc.jsonifycraft.JsonifyCraft;
 import us.timinc.jsonifycraft.description.BlockDescription;
-import us.timinc.jsonifycraft.description.WorldObjectDescription;
 import us.timinc.mcutil.MCRegistry;
 
 public class JsonedBlockItem extends ItemBlock {
-    private WorldObjectDescription description;
+    private final BlockDescription description;
 
     private EnumRarity rarity;
 
