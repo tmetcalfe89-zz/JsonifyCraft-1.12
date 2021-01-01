@@ -25,7 +25,7 @@ public class JsonedFood extends ItemFood {
   private EnumRarity rarity;
 
   public JsonedFood(FoodDescription foodDescription) {
-    super(foodDescription.hunger, foodDescription.saturation, foodDescription.meat);
+    super(foodDescription.hunger, foodDescription.getSaturation(), foodDescription.hasFlag("meat"));
 
     this.description = foodDescription;
 
