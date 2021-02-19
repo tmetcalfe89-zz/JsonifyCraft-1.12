@@ -34,7 +34,7 @@ public class JsonedFood extends ItemFood {
 
   private void setup() {
     // Group
-    setCreativeTab(MCRegistry.ITEM_GROUPS.getFromName(description.group));
+    setCreativeTab(CreativeTabs.MISC);
 
     // Max stack size
     setMaxStackSize(Ints.constrainToRange(description.stack, 1, 64));

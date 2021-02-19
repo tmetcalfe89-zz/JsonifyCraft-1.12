@@ -184,34 +184,6 @@ public abstract class MCRegistry<T> {
         }
     }.setup();
 
-    @SideOnly(Side.CLIENT)
-    public static MCRegistry<CreativeTabs> ITEM_GROUPS = new MCRegistry<CreativeTabs>() {
-        private Map<String, CreativeTabs> itemGroups;
-
-        @Override
-        public MCRegistry<CreativeTabs> setup() {
-            itemGroups = new HashMap<>();
-            for (CreativeTabs tab : CreativeTabs.CREATIVE_TAB_ARRAY) {
-                addItemGroup(tab);
-            }
-            return this;
-        }
-
-        @Override
-        public CreativeTabs getFromName(String name) {
-            return itemGroups.getOrDefault(name, CreativeTabs.MISC);
-        }
-
-        @Override
-        public boolean isValidName(String name) {
-            return itemGroups.containsKey(name);
-        }
-
-        public void addItemGroup(CreativeTabs tab) {
-            itemGroups.put(tab.getTabLabel().toLowerCase(), tab);
-        }
-    }.setup();
-
     public static MCRegistry<Float> NOURISHMENT_TIERS = new MCRegistry<Float>() {
         private Map<String, Float> nourishment_tiers;
 

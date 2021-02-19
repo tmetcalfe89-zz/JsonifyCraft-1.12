@@ -2,6 +2,7 @@ package us.timinc.jsonifycraft.world;
 
 import com.google.common.primitives.Ints;
 import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumRarity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -29,7 +30,7 @@ public class JsonedItem extends Item {
 
     private void setup() {
         // Group
-        setCreativeTab(MCRegistry.ITEM_GROUPS.getFromName(description.group));
+        setCreativeTab(CreativeTabs.MISC);
 
         // Max stack size
         setMaxStackSize(Ints.constrainToRange(description.stack, 1, 64));
