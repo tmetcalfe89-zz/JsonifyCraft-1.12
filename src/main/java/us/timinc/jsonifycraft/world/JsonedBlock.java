@@ -4,6 +4,7 @@ import com.google.common.primitives.Floats;
 import com.google.common.primitives.Ints;
 import net.minecraft.block.Block;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
@@ -55,7 +56,7 @@ public class JsonedBlock extends Block {
         }
 
         // Group
-        setCreativeTab(MCRegistry.ITEM_GROUPS.getFromName(description.group));
+        setCreativeTab(CreativeTabs.MISC);
     }
 
     @Override
